@@ -4,7 +4,7 @@ Dieses Template erleichtert den Einstieg in die Programmierung einer verwalteten
 
 Installation
 ------------
-Die `PROFFIX REST API Extension.zip` muss ins Projekt-Template-Verzeichnis von Visual Studio kopiert werden (z.B. `"%USERPROFILE%\Documents\Visual Studio 2017\Templates\ProjectTemplates\Visual C#"`).
+Die [`PROFFIX REST API Extension.zip`](https://github.com/PROFFIX-NET/RestApiErweiterungenTemplate/raw/master/PROFFIX%20REST%20API%20Extension.zip) muss ins Projekt-Template-Verzeichnis von Visual Studio kopiert werden (z.B. `"%USERPROFILE%\Documents\Visual Studio 2017\Templates\ProjectTemplates\Visual C#"`).
 
 **HINWEIS:** Der tatsächliche Pfad kann im Visual Studio unter `Tools → Options... → Projects and Solutions → Locations → User project templates location` nachgeschlagen oder geändert werden.
 
