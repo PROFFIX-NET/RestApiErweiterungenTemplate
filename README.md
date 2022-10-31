@@ -2,6 +2,13 @@
 
 Dieses Template erleichtert den Einstieg in die Programmierung einer verwalteten Proffix REST API Erweiterung. Logging ist bereits integriert (Serilog), ebenso enthält das Template einen DemoController, mit welchem Anfragen an die Proffix REST API geschickt werden können. Wird ein aus dem Template erstelltes Projekt kompiliert, kann es direkt als Erweiterung verwendet werden.
 
+## Voraussetzungen
+
+- Proffix Installation
+- Funktionierende Proffix REST API
+- Proffix REST API Manager
+- MS Visual Studio, welches .Net 6.0 untestützt
+
 ## Installation
 
 Die [*Proffix REST API Extension.zip*](https://github.com/Proffix-NET/RestApiErweiterungenTemplate/raw/master/PROFFIX%20REST%20API%20Extension.zip) muss ins Projekt-Template-Verzeichnis von Visual Studio kopiert werden (z.B. `"%USERPROFILE%\Documents\Visual Studio 2022\Templates\ProjectTemplates\"`).
