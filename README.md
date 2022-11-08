@@ -29,7 +29,7 @@ Wird die Erweiterung im Hauptfenster des Managers unter "Erweiterungen" importie
 
 Mit dem Klick auf "Ok" wird die Erweiterung als Windows Service installiert und kann von der Proffix REST API verwendet werden. Diese Erweiterung ist jetzt auch im Proffix REST API Manager unter "Erweiterungen" sichtbar und kann dort verwaltet werden.
 
-Die Erweiterung kann nun mit einem http-Request-Tool wie Thunder Client oder Postman getestet werden. Dazu loggt man sich erst bei der Proffix REST API ein (siehe REST API Dokumentation) und schickt nachher z.B. den folgenden Request (entspricht dem Proffix WebEvent Adressänderung mit der Adressnummer 1 ohne LoginToken):
+Die Erweiterung kann nun mit einem http-Request-Tool wie Thunder Client oder Postman getestet werden. Dazu loggt man sich erst bei der Proffix REST API ein (siehe REST API Dokumentation unter `Session und Login`) und schickt nachher z.B. den folgenden Request (entspricht dem Proffix WebEvent Adressänderung mit der Adressnummer 1 ohne LoginToken):
 ```url
 POST {{BaseUrl}}/EXTENSION/<vendor>/<extensionName>/Demo
 ```
