@@ -7,7 +7,7 @@ Dieses Template erleichtert den Einstieg in die Programmierung einer verwalteten
 - Proffix Installation
 - Funktionierende Proffix REST API
 - Proffix REST API Manager
-- MS Visual Studio, welches .Net 6.0 untestützt
+- MS Visual Studio, welches .Net 6.0 unterstützt
 
 ## Installation
 
@@ -21,15 +21,15 @@ Sobald das Template am richtigen Ort gespeichert wurde, kann in Visual Studio un
 
 > **Achtung!** Um später auftauchende Probleme zu vermeiden, soll der Projektname keine Leer- und Sonderzeichen enthalten.
 
-Dieses Projekt kann sogleich mit der rechten Maustaste gepublished und als Extension verwendet werden. Dazu muss der ganze Publish-Inhalt in eine Zip-Datei mit beliebigem Namen komprimiert werden, welche dann im Proffix REST API Manager importiert werden kann.
+Dieses Projekt kann sogleich mit der rechten Maustaste in einen Ordner gepublished und als Extension verwendet werden. Dazu muss der ganze Publish-Inhalt in eine Zip-Datei mit beliebigem Namen komprimiert werden, welche dann im Proffix REST API Manager importiert werden kann.
 
-Wird die Erweiterung im Hauptfenster des Managers importiert, so muss sie schliesslich noch auf der gewünschten Instanz aktiviert werden (unter "Erweiterungen" Plus-Symbol anklicken, Instanzname angeben und unter "Name" die gewünschte Erweiterung auswählen, falls es mehrere gibt).
+Wird die Erweiterung im Hauptfenster des Managers unter "Erweiterungen" importiert, so muss sie schliesslich noch auf der gewünschten Instanz aktiviert werden. Dazu muss auf der Instanz unter "Erweiterungen" das Plus-Symbol angeklickt werden. Es muss ein Instanzname angegeben und unter "Name" die gewünschte Erweiterung ausgewählt werden, falls es mehrere gibt.
 
-> **Hinweis:** Die neue Erweiterung muss in der Tabelle aktiviert werden!
+> **Hinweis:** Die neue Erweiterung muss in der Tabelle mit dem Flag "aktiviert" installiert werden!
 
-Mit dem Klick auf "Ok" wird die Erweiterung nun als Windows Service installiert und kann von der Proffix REST API verwendet werden. Diese Erweiterung ist nun auch im Proffix REST API Manager unter "Erweiterungen" sichtbar und kann dort verwaltet werden.
+Mit dem Klick auf "Ok" wird die Erweiterung als Windows Service installiert und kann von der Proffix REST API verwendet werden. Diese Erweiterung ist jetzt auch im Proffix REST API Manager unter "Erweiterungen" sichtbar und kann dort verwaltet werden.
 
-Die Erweiterung kann nun mit einem http-Request-Tool wie Thunder Client oder Postman getestet werden. Dazu loggt man sich erst bei der Proffix REST API ein und schickt nachher z.B. den folgenden Request (entspricht dem Proffix WebEvent Adressänderung mit der Adressnummer 1 ohne LoginToken):
+Die Erweiterung kann nun mit einem http-Request-Tool wie Thunder Client oder Postman getestet werden. Dazu loggt man sich erst bei der Proffix REST API ein (siehe REST API Dokumentation) und schickt nachher z.B. den folgenden Request (entspricht dem Proffix WebEvent Adressänderung mit der Adressnummer 1 ohne LoginToken):
 ```url
 POST {{BaseUrl}}/EXTENSION/<vendor>/<extensionName>/Demo
 ```
@@ -55,12 +55,9 @@ C:\ProgramData\Proffix REST API\Extension Instances\<InstanceName>\Logs
 `
 Im Log wird der Inhalt der Adresse mit der Nummer 1 angezeigt.
 
-Will man nun die neu erstellte Erweiterung mit eigenen Funktionen anreichern, passt man am besten im Projektordner `Properties` den Port in der Datei `launchSettings.json` so an, dass er der installierten Erweiterung entspricht. Der Dienst muss natürlich vorgängig deaktiviert werden.
+Will man die neu erstellte Erweiterung mit eigenen Funktionen anreichern, passt man am besten im Projektordner `Properties` den Port in der Datei `launchSettings.json` so an, dass er der installierten Erweiterung entspricht. Der zugehörige Dienst muss natürlich vorgängig deaktiviert werden.
 
 ## Debugging
 
-Um die Aufrufe einer lokal installierten Proffix REST API in die lokale Entwicklungsumgebung weiterzuleiten, kann eine nicht verwaltete Erweiterung verwendet werden, welche die Anfragen an *http://localhost:5000* weiterleitet. Eine solche nicht verwaltete Erweiterung befindet sich verwendungsfähig in diesem Repository ([*RestApiDevelopmentExtension.zip*](https://github.com/Proffix-NET/RestApiErweiterungenTemplate/raw/master/RestApiDevelopmentExtension.zip)).
-
-## Erweiterung erstellen (ZIP-Archiv erstellen)
-
-Die Erweiterung kann im Visual Studio durch einen Klick unter `Build → Publish {ProjektName} → Publish` erstellt werden. Die Binaries befinden sich im Projekt-Verzeichnis unter `bin\Release\net6.0\publish`. Sie müssen in ein zip-Archiv gepackt werden (beliebiger Name) und können danach via Proffix REST API Manager installiert werden.
+Oben wurde beschrieben, wie man die Requests über die Proffix REST API auf die Entwicklungsumgebung weiterleitet. Somit lässt sich der Code auch einfach debuggen.
+Als zweite Möglichkeit kann eine nicht verwaltete Erweiterung verwendet werden, welche die Anfragen an *http://localhost:5000* weiterleitet. Eine solche nicht verwaltete Erweiterung befindet sich verwendungsfähig in diesem Repository ([*RestApiDevelopmentExtension.zip*](https://github.com/Proffix-NET/RestApiErweiterungenTemplate/raw/master/RestApiDevelopmentExtension.zip)).
