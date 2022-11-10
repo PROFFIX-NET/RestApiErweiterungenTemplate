@@ -21,7 +21,8 @@ Sobald das Template am richtigen Ort gespeichert wurde, kann in Visual Studio un
 
 > **Achtung!** Um später auftauchende Probleme zu vermeiden, soll der Projektname keine Leer- und Sonderzeichen enthalten.
 
-Dieses Projekt kann sogleich mit der rechten Maustaste in einen Ordner gepublished und als Extension verwendet werden. Dazu muss der ganze Publish-Inhalt in eine Zip-Datei mit beliebigem Namen komprimiert werden, welche dann im Proffix REST API Manager importiert werden kann.
+Dieses Projekt kann sogleich mit der rechten Maustaste in einen Ordner gepublished und als Extension verwendet werden. Dazu muss der ganze Publish-Inhalt in eine Zip-Datei mit beliebigem Namen komprimiert werden, welche dann im Proffix REST API Manager importiert werden kann:
+![Publish folder to zip](publishFolder.png)
 
 Wird die Erweiterung im Hauptfenster des Managers unter "Erweiterungen" importiert, so muss sie schliesslich noch auf der gewünschten Instanz aktiviert werden. Dazu muss auf der Instanz unter "Erweiterungen" das Plus-Symbol angeklickt werden. Es muss ein Instanzname angegeben und unter "Name" die gewünschte Erweiterung ausgewählt werden, falls es mehrere gibt.
 
